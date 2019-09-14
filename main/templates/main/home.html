@@ -11,14 +11,19 @@
 
 <body>
     {% include "main/includes/nav.html" %}
-    <br>
-    <div class="container text-left text-wrap justify-content-center" style="width: 39rem;">
-        <h5 style="font-weight: bold">From r/quotes</h5>
-        <h6>{{quote}}</h6>
+    <div class="row text-left" style="background-color: #E0F7FA;">
+        <div class="container-fluid ml-1">
+            <br>
+            <h5 class="col-12">From r/quotes</h5>
+            <h3  style="font-weight: bold ;" class="col-6">{{quote}}</h3>
+            <br>
+        </div>
+
     </div>
     <br>
-    <div class="container">
-        <h4 style="font-weight: bold;">About Me</h4>
+    <div class="container-fluid ml-1">
+        <h1 style="font-weight: bolder;">About Me</h1>
+
     </div>
 
 </body>
@@ -28,5 +33,6 @@
 <style>
     * {
         font-family: 'Montserrat', sans-serif;
+        overflow: hidden;
     }
 </style>

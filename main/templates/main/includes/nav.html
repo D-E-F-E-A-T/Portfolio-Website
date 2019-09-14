@@ -6,7 +6,6 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark "
         style="font-family: 'Montserrat', sans-serif; text-transform: uppercase; ">
         <h2 class="text-white ml-2">Siddhartha Varma</h2>
-        <br>
         <h5 class="text-secondary ml-auto mr-2">Technology Enthusiast | Passionate about Design</h5>
     </nav>
 
@@ -19,12 +18,12 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr" style="font-weight: bold">
+            <ul class="navbar-nav" style="font-weight: bold">
                 <li class="nav-item">
                     {% if request.path == '/' %}
-                        <a class="nav-link text-secondary" href="{% url 'main:projects' %}">Projects</a>
+                    <a class="nav-link text-secondary" href="{% url 'main:projects' %}">Projects</a>
                     {% else %}
-                        <a class="nav-link text-secondary" href="{% url 'main:homepage' %}">Home</a>
+                    <a class="nav-link text-secondary" href="{% url 'main:homepage' %}">Home</a>
                     {% endif %}
                 </li>
                 <li class="nav-item">
@@ -37,7 +36,22 @@
                 <li class="nav-item">
                     <a class="nav-link text-secondary" href="https://github.com/BRO3886">GitHub</a>
                 </li>
-                
+            </ul>
+            <ul class="navbar-nav ml-auto" style="font-weight: bold;">
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="https://www.facebook.com/siddhartha.verma99">
+                        <img style="background-color: white; width: 20px; height: 20px; "
+                            src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png"
+                            alt="facebook">
+                    </a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link text-secondary" href="https://www.instagram.com/sidv_22/">
+                            <img style="background-color: white; width: 20px; height: 20px;"
+                                src="https://cdn2.iconfinder.com/data/icons/harmonicons-04/64/instagram-512.png"
+                                alt="instagram">
+                        </a>
+                    </li>
             </ul>
         </div>
     </nav>
