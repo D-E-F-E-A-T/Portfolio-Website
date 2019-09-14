@@ -1,0 +1,45 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<div class="bg-dark">
+
+    <br>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark "
+        style="font-family: 'Montserrat', sans-serif; text-transform: uppercase; ">
+        <h2 class="text-white ml-2">Siddhartha Varma</h2>
+        <br>
+        <h5 class="text-secondary ml-auto mr-2">Technology Enthusiast | Passionate about Design</h5>
+    </nav>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark"
+        style="font-family: 'Montserrat', sans-serif; text-transform: uppercase;">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr" style="font-weight: bold">
+                <li class="nav-item">
+                    {% if request.path == '/' %}
+                        <a class="nav-link text-secondary" href="{% url 'main:projects' %}">Projects</a>
+                    {% else %}
+                        <a class="nav-link text-secondary" href="{% url 'main:homepage' %}">Home</a>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary"
+                        href="https://drive.google.com/open?id=1hhfbny0I_DmotwzbUhIHM5pS6ECNGu_c">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="https://www.linkedin.com/in/siddharthav22/">LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="https://github.com/BRO3886">GitHub</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
