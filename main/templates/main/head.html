@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Siddhartha Varma</title>
+</head>
+
+<body>
+    {% include "main/includes/nav.html" %}
+    {% include "main/includes/home.html" %}
+</body>
+
+</html>
+
+<style>
+    * {
+        font-family: 'Montserrat', sans-serif;
+        overflow-x: hidden;
+    }
+</style>

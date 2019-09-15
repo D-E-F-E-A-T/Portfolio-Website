@@ -29,7 +29,7 @@ def home(request):
     rand = random.randrange(0,4,1)
     print(quotes[rand])
     rand_quote = quotes[rand]
-    return render(request,'main/home.html',{'quote':rand_quote})
+    return render(request,'main/head.html',{'quote':rand_quote})
 
 def projects(request):
     return render(request, 'main/projects.html')
