@@ -37,6 +37,7 @@ def projects(request):
     return render(request, 'main/projects.html')
 
 def contactMe(request):
+    context = {}
     if request.method == 'POST':
         form = contactForm(request.POST)
         if form.is_valid():
@@ -46,6 +47,8 @@ def contactMe(request):
             newContact.phone = form.cleaned_data['phone']
             newContact.message = form.cleaned_data['message']
             newContact.save()
-    else:
-        form = contactForm()
-    return render(request, 'main/contact me.html', {'form': form})
+            success = 'Great! We\'ll get in touch soon!'
+            context.update({'success': success})
+    form = contactForm()
+    context.update({'form':form})
+    return render(request, 'main/contact me.html', context)
