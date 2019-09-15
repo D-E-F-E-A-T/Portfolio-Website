@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . forms import contactForm
+from .models import contact
 
 import praw
 import random
@@ -36,5 +37,15 @@ def projects(request):
     return render(request, 'main/projects.html')
 
 def contactMe(request):
-    form = contactForm()
+    if request.method == 'POST':
+        form = contactForm(request.POST)
+        if form.is_valid():
+            newContact = contact()
+            newContact.name = form.cleaned_data['name']
+            newContact.email = form.cleaned_data['email']
+            newContact.phone = form.cleaned_data['phone']
+            newContact.message = form.cleaned_data['message']
+            newContact.save()
+    else:
+        form = contactForm()
     return render(request, 'main/contact me.html', {'form': form})
