@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from . forms import contactForm
 
 import praw
 import random
@@ -35,4 +36,5 @@ def projects(request):
     return render(request, 'main/projects.html')
 
 def contactMe(request):
-    return render(request, 'main/contact me.html')
+    form = contactForm()
+    return render(request, 'main/contact me.html', {'form': form})
