@@ -20,10 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'a+z6_ki-abmx$#pm%2wjuad-$xnytxdr-y8kksvz)u#0bu=bmz'
-
+#SECRET_KEY = 'a+z6_ki-abmx$#pm%2wjuad-$xnytxdr-y8kksvz)u#0bu=bmz'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'a+z6_ki-abmx$#pm%2wjuad-$xnytxdr-y8kksvz)u#0bu=bmz')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+#DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+
 
 ALLOWED_HOSTS = []
 
@@ -125,3 +127,13 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 import django_heroku
 django_heroku.settings(locals())
+
+X_FRAME_OPTIONS = 'DENY'
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_HSTS_SECONDS = '0'
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
