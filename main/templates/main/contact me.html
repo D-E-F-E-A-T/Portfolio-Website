@@ -33,17 +33,19 @@
     <br>
     <div class="container">
         <h1 style="font-weight: bolder;">Let's Get In Touch</h1>
+        {% if success %}
+        <p style="color: green;">{{success}}</p>
+        {% else %}
         <p>Have a cool idea for a collaboration or do you want to hire me?</p>
+        {% endif %}
         <form method="POST">
-                {% csrf_token %}
-                {{form|crispy}}
-                <br>
-                <button class="btn btn-dark ">Submit</button>
+            {% csrf_token %}
+            {{form|crispy}}
+            <br>
+            <button class="btn btn-dark ">Submit</button>
         </form>
         <br>
-        {% if success %}
-            <h5 style = "color: green;">{{success}}</h5>
-        {% endif %}
+
     </div>
     <br>
     <br>
