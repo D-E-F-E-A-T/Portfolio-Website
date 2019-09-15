@@ -8,18 +8,18 @@
             <h2 class="display-4 text-center" style="font-weight: bold; overflow-y: hidden;">Hi, I am Siddhartha</h2>
             <br>
             <div class="row justify-content-center">
-                <button href="#" class="col-1 text-center btn btn-dark">Get in Touch</button>
+                <a href="{% url 'main:contact' %}" class="col-1 text-center btn btn-dark">Get in Touch</a>
             </div>
             <br>
-            <div>
-                <h5 class="col-12">From r/quotes</h5>
-                <h3 style="font-weight: bold ;" class="col-12">{{quote}}</h3>
+            <div class="container">
+                <h5>From r/quotes</h5>
+                <h3 style="font-weight: bold ;" class="text-left">{{quote}}</h3>
             </div>
             <br>
         </div>
     </div>
     <br>
-    <div class="container-fluid ml-1">
+    <div class="container">
         <h1 style="font-weight: bolder;">About Me</h1>
         <p class="text-left-lg text-center-md">
             Hi, my name is Siddhartha Varma. I am a CS undergrad at Vellore Institute of Technology, class of '22. I am

@@ -33,3 +33,6 @@ def home(request):
 
 def projects(request):
     return render(request, 'main/projects.html')
+
+def contactMe(request):
+    return render(request, 'main/contact me.html')
