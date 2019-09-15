@@ -1,0 +1,24 @@
+<footer class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <ul class="navbar-nav" style="font-weight: bold;;  text-transform: uppercase;">
+        <li class="nav-item">
+            {% if request.path == '/' %}
+            <a class="nav-link text-secondary" href="{% url 'main:projects' %}">Projects</a>
+            {% else %}
+            <a class="nav-link text-secondary" href="{% url 'main:homepage' %}">Home</a>
+            {% endif %}
+        </li>
+        <li class="nav-item">
+            {% if request.path == '/contact-me' %}
+            <a class="nav-link text-secondary" href="{% url 'main:projects' %}">Projects</a>
+            {% else %}
+            <a class="nav-link text-secondary" href="{% url 'main:contact' %}">Get In Touch</a>
+            {% endif %}
+
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" style="font-weight: bold;">
+        <li class="nav-item">
+            <h5 class="text-secondary">Made with ❤️ using Django</h5>
+        </li>
+    </ul>
+</footer>

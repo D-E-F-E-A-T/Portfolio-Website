@@ -47,7 +47,7 @@ def contactMe(request):
             newContact.phone = form.cleaned_data['phone']
             newContact.message = form.cleaned_data['message']
             newContact.save()
-            success = 'Great! We\'ll get in touch soon!'
+            success = 'Great! I\'ll get back to you very soon!'
             context.update({'success': success})
     form = contactForm()
     context.update({'form':form})
