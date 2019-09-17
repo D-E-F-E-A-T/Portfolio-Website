@@ -1,4 +1,5 @@
-<footer class="navbar navbar-expand-sm navbar-dark bg-dark">
+<style>ul.nav a:hover{color: #fff !important}</style>
+<footer class="navbar navbar-expand-sm navbar-dark bg-dark " >
     <ul class="navbar-nav" style="font-weight: bold;;  text-transform: uppercase;">
         <li class="nav-item">
             {% if request.path == '/' %}
@@ -16,9 +17,25 @@
 
         </li>
     </ul>
+    <div class="navbar-nav ml-auto">
+        <ul class="navbar-nav" >
+            <li class= "nav-item"><a
+                    class="nav-link text-secondary" role="button"
+                    href="#"><i class="fab fa-facebook fa-fw"></i></a></li>
+            <li class="nav-item"><a
+                    class="nav-link text-secondary" role="button"
+                    href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+            <li class="nav-item"><a
+                    class="nav-link text-secondary" role="button"
+                    href="https://github.com/BRO3886"><i class="fab fa-github fa-fw"></i></a></li>
+            <li class="nav-item"><a
+                    class="nav-link text-secondary" role="button"
+                    href="https://www.linkedin.com/in/siddharthav22/"><i class="fab fa-linkedin fa-fw"></i></a></li>
+        </ul>
+    </div>
     <ul class="navbar-nav ml-auto" style="font-weight: bold;">
         <li class="nav-item">
-            <h5 class="text-secondary">Made with ❤️ using Django</h5>
+            <h5 class="text-white">Made with ❤️ using Django</h5>
         </li>
     </ul>
 </footer>
