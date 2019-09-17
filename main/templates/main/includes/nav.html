@@ -5,7 +5,7 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark "
         style="font-family: 'Montserrat', sans-serif; text-transform: uppercase;">
         <h2 class="text-white ml-2">Siddhartha Varma</h2>
-        <h5 class="text-white ml-auto mr-2" style="font-weight: bold">Technology Enthusiast | Passionate about Design
+        <h5 class="text-white ml-auto mr-2" style="font-weight: bold">Web Developer | Designer
         </h5>
     </nav>
 
@@ -27,6 +27,13 @@
                     {% endif %}
                 </li>
                 <li class="nav-item">
+                    {% if request.path == '/contact-me' %}
+                    <a class="nav-link text-secondary" href="{% url 'main:projects' %}">Projects</a>
+                    {% else %}
+                    <a class="nav-link text-secondary" href="{% url 'main:contact' %}">Get In Touch</a>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-secondary" href="#about">About</a>
                 </li>
                 <li class="nav-item">
@@ -40,12 +47,12 @@
             <ul class="navbar-nav ml-auto" style="font-weight: bold;">
                 <li class="nav-item">
                     <a class="nav-link text-secondary" href="https://www.facebook.com/siddhartha.verma99">
-                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-facebook" style="font-size: 1.5em;"></i>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-secondary" href="https://www.instagram.com/sidv_22/">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram" style="font-size: 1.5em;"></i>
                     </a>
                     </a>
                 </li>
