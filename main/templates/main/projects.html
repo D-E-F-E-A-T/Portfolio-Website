@@ -50,8 +50,24 @@
     <div class="container">
         <h2 style="font-weight: bold;">Personal Projects</h2>
         <br>
+        <div class="container">
+            <div class="row justify-content-left">
+                {% for proj in projects reversed%}
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{proj.title}}</h5>
+                        <p class="card-text">{{proj.description}}</p>
+                        <a href="{{proj.link}}" class="card-link">View</a>
+                        <a href="{{proj.code_link}}" class="card-link">View Code</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
         <br>
     </div>
+    <br>
+    <br>
 </body>
 
 {% include "main/includes/footer.html" %}

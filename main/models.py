@@ -16,3 +16,12 @@ class experience(models.Model):
     content = models.TextField()
     def __str__(self):
         return self.title
+
+class project(models.Model):
+    title = models.CharField(max_length=40)
+    description = models.CharField(max_length=200)
+    link = models.CharField(max_length=200)
+    code_link = models.CharField(max_length=200)
+    def __str__(self):
+        return self.title
+

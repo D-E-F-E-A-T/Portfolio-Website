@@ -58,25 +58,14 @@
     <div class="container" id="exp">
         <h1 style="font-weight: bolder;">Experience</h1>
         <br>
+        {% for exp in experience reversed %}
         <div style="border-left:  rgb(50, 228, 183) 8px solid" class="container">
-            <h3>Summer Internship at OYO Rooms</h3>
-            <h5>June 2019</h5>
-            <p class="text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla posuere viverra. Nam sed ipsum
-                quam. Donec porta, justo ac vulputate vulputate, tellus ipsum scelerisque tellus, tincidunt vehicula
-                magna arcu a velit.
-            </p>
+            <h3>{{exp.title}}</h3>
+            <h5>{{exp.date}}</h5>
+            <p class="text-left">{{exp.content}}</p>
         </div>
         <br>
-        <div style="border-left:  rgb(50, 228, 183) 8px solid" class="container">
-            <h3>Core Team Member at ISA-VIT</h3>
-            <h5>December 2018 - Present</h5>
-            <p class="text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla posuere viverra. Nam sed ipsum
-                quam. Donec porta, justo ac vulputate vulputate, tellus ipsum scelerisque tellus, tincidunt vehicula
-                magna arcu a velit.
-            </p>
-        </div>
+        {% endfor %}
         <br>
     </div>
 </body>
