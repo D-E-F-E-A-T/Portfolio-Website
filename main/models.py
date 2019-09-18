@@ -9,3 +9,10 @@ class contact(models.Model):
     message = models.CharField(max_length=200)
     def __str__(self):
         return self.name
+
+class experience(models.Model):
+    title = models.CharField(max_length=40)
+    date = models.CharField(max_length=40)
+    content = models.TextField()
+    def __str__(self):
+        return self.title
