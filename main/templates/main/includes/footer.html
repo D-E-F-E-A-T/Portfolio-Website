@@ -1,35 +1,27 @@
-
 <footer class="navbar navbar-expand-sm navbar-dark bg-dark ">
     <ul class="navbar-nav" style="font-weight: bold;;  text-transform: uppercase;">
         <li class="nav-item">
-            {% if request.path == '/' %}
-            <a class="nav-link text-secondary" href="{% url 'main:projects' %}">Projects</a>
-            {% else %}
-            <a class="nav-link text-secondary" href="{% url 'main:homepage' %}">Home</a>
-            {% endif %}
+            <a id="navlist" class="nav-link text-secondary" href="#about">About</a>
         </li>
-        <li class="nav-item">
-            {% if request.path == '/contact-me' %}
-            <a class="nav-link text-secondary" href="{% url 'main:projects' %}">Projects</a>
-            {% else %}
-            <a class="nav-link text-secondary" href="{% url 'main:contact' %}">Get In Touch</a>
-            {% endif %}
-
+        <li id="navlist" class="nav-item">
+            <a class="nav-link text-secondary" href="#exp">Experience</a>
+        </li>
+        <li id="navlist" class="nav-item">
+            <a class="nav-link text-secondary"
+                href="https://drive.google.com/open?id=1hhfbny0I_DmotwzbUhIHM5pS6ECNGu_c">Resume</a>
         </li>
     </ul>
-    <div class="navbar-nav ml-auto">
-        <ul class="navbar-nav" style="font-size: 1.5em;">
-            <li class="nav-item"><a class="nav-link text-secondary" role="button" href="#"><i
-                        class="fab fa-facebook fa-fw"></i></a></li>
-            <li class="nav-item"><a class="nav-link text-secondary" role="button" href="#"><i
-                        class="fab fa-instagram fa-fw"></i></a></li>
-            <li class="nav-item"><a class="nav-link text-secondary" role="button" href="https://github.com/BRO3886"><i
-                        class="fab fa-github fa-fw"></i></a></li>
-            <li class="nav-item"><a class="nav-link text-secondary" role="button"
-                    href="https://www.linkedin.com/in/siddharthav22/"><i class="fab fa-linkedin fa-fw"></i></a></li>
-        </ul>
-    </div>
-    <ul class="navbar-nav ml-auto" style="font-weight: bold;">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link text-secondary" role="button" href="#"><i
+                    class="fab fa-facebook fa-fw"></i></a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" role="button" href="#"><i
+                    class="fab fa-instagram fa-fw"></i></a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" role="button" href="https://github.com/BRO3886"><i
+                    class="fab fa-github fa-fw"></i></a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" role="button"
+                href="https://www.linkedin.com/in/siddharthav22/"><i class="fab fa-linkedin fa-fw"></i></a></li>
+    </ul>
+    <ul class="navbar-nav ml-auto " style="font-weight: bold;">
         <li class="nav-item">
             <h5 class="text-white">Made with ❤️ using Django</h5>
         </li>

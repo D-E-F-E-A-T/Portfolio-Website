@@ -1,16 +1,17 @@
 <html>
 
-<body>
+<body class="bg-light">
 
-    <div class="row" style="background-color: #E0F7FA;">
+    <div class="row text-white" style="background-color:  rgb(50, 228, 183); ">
         <div class="container-fluid ml-1">
             <br>
             <h2 class="display-3 text-center" style="font-weight: bold; overflow-y: hidden;">Hi, I am Siddhartha!</h2>
-            <h5 class="text-center">Web Developer - Graphic Artist - User Experience Designer</h5>
+            <h5 class="text-center">Web Developer - Graphic Designer - Machine Learning Enthusiast</h5>
             <br>
             <div class="row justify-content-center">
 
-                <a href="{% url 'main:contact' %}" class=" text-center btn btn-dark text-wrap">Get in Touch</a>
+                <a href="{% url 'main:contact' %}" id="button" class=" text-center btn btn-dark text-wrap">Get in
+                    Touch</a>
             </div>
             <br>
             <div class="container">
@@ -47,7 +48,8 @@
                     style="color: black; font-weight: bold">photography</a> page on Instagram.
             </p>
             <img src="https://lh3.googleusercontent.com/qu_cV9stnkX7moVlMSC-wg_GBzPJQN1UTRSUAAad5nxqlKkvKpey3NlB_qy6VSaiN5UqUARteN7cwO6qFqS-cnQK0rFAIOkwx-Akj6Wd6E47xAEXbv2f9bAXvehnjP48ic0yCgNlIdWEtzy4gbtn0x0PmLm9JgdMMBANAHnI8P9fSVfkaL9bwc2yWndo5zG6L0Wi-FiHiSWSv0ZbfTmnTSxOTtvodiiS5jkc-urMxam57mouegv92Ri8elukNch5hvJg2llluivXTwp_wpU7N6rMgsZDPx5kbh1GAvbJSM6ZNmOEd7J9JSqv18DlEsf68UKZCGt2mRdVmeeRsVU3TvI8yesEzrdNCYYKRgGkpFCyMjaMseCiRvNy8NS4A8YG3ydv-OAmb-RCEh_9XiXjpdPcQHJ6VT3W2OjFZQmYtEFAsiZtVleEuXuK-5rnWnmR7Z5lW163HXn60QyHlfdeWbpGdriz0iqoUhJLY_zZhGeEUOoEY-Iiujb4DthHqSggtynWeKB7R0y2OlldlDMb0G9nzSYEo6qN1avvfowC4xf2FR6b2TmO_ZAFG1-EdlbtN7bJ0RIOGTHqqgGRGOz71-cTtfkeARWkF0o9OzduG-o5t3y4Tel1aUsPhZfcoV4y0badQA7B4bFJ9SJm-rpAK1_5PjPWEdsxh74Uji0_JBmr07rRv18MYREQ=s943-no"
-                alt="me" style="margin:0; padding:0; border: 10px solid #E0F7FA; border-radius: 5px;" class="col-md-4">
+                alt="me" style="margin:0; padding:0; border: 8px solid rgb(50, 228, 183); border-radius: 5px;"
+                class="col-md-4">
             <br>
         </div>
         <br>
@@ -55,36 +57,37 @@
     </div>
     <div class="container" id="exp">
         <h1 style="font-weight: bolder;">Experience</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Title</h4>
-                        <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-                            dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                            metus.</p><a class="card-link" href="#">Link</a><a class="card-link" href="#">Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Title</h4>
-                        <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-                            dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                            metus.</p><a class="card-link" href="#">Link</a><a class="card-link" href="#">Link</a>
-                    </div>
-                </div>
-            </div>
+        <br>
+        <div style="border-left:  rgb(50, 228, 183) 8px solid" class="container">
+            <h3>Summer Internship at OYO Rooms</h3>
+            <h5>June 2019</h5>
+            <p class="text-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla posuere viverra. Nam sed ipsum
+                quam. Donec porta, justo ac vulputate vulputate, tellus ipsum scelerisque tellus, tincidunt vehicula
+                magna arcu a velit.
+            </p>
         </div>
         <br>
-        <hr>
+        <div style="border-left:  rgb(50, 228, 183) 8px solid" class="container">
+            <h3>Core Team Member at ISA-VIT</h3>
+            <h5>December 2018 - Present</h5>
+            <p class="text-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla posuere viverra. Nam sed ipsum
+                quam. Donec porta, justo ac vulputate vulputate, tellus ipsum scelerisque tellus, tincidunt vehicula
+                magna arcu a velit.
+            </p>
+        </div>
+        <br>
     </div>
-
 </body>
 
-</footer>
-
 </html>
+
+<style>
+    #button:hover {
+        background-color: white;
+        color: black;
+        border-color: white;
+
+    }
+</style>

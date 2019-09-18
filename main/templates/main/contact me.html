@@ -34,9 +34,9 @@
     <title>Contact Me</title>
 </head>
 
-<body>
+<body class="bg-light">
     {% include "main/includes/nav.html" %}
-    <div class="row justify-content-center" style="background-color: #E0F7FA;">
+    <div class="row justify-content-center text-white" style="background-color: rgb(50, 228, 183)">
         <div class="container-fluid ml-1">
             <br>
             <h2 class="col-12 display-4 text-center" style="font-weight: bold;overflow: hidden;">Contact Me</h2>
@@ -45,13 +45,11 @@
                 awesome project
                 collaboration or just say hi,
                 fill up the form below.</h5>
-            <br>
             <h5 class="text-center">You can also reach out to me on</h5>
-            <br>
             <div class="row justify-content-center">
-                <a href="mailto:siddverma1999@gmail.com" target="_blank" class="mr-2 btn btn-dark">Email</a>
-                <a class="mr-2 btn btn-dark" href="tel:+918860986398">Phone</a>
-                <a class="mr-2 btn btn-dark" href="https://wa.me/918860986398">WhatsApp</a>
+                <a id = "contactbutton" href="mailto:siddverma1999@gmail.com" target="_blank" class="mr-2 btn btn-dark">Email</a>
+                <a id = "contactbutton" class="mr-2 btn btn-dark" href="tel:+918860986398">Phone</a>
+                <a id = "contactbutton" class="mr-2 btn btn-dark" href="https://wa.me/918860986398">WhatsApp</a>
             </div>
             <br>
             <br>
@@ -59,17 +57,18 @@
     </div>
     <br>
     <div class="container">
-        <h1 style="font-weight: bolder;">Let's Get In Touch</h1>
         {% if success %}
-        <p style="color: green;">{{success}}</p>
+        <h1 style="font-weight: bolder; color: green;">{{success}}</h1>
         {% else %}
-        <p>Have a cool idea for a collaboration or do you want to hire me?</p>
+        <h1 style="font-weight: bolder;">Let's Get In Touch</h1>
         {% endif %}
+        <p>Have a cool idea for a collaboration or do you want to hire me?</p>
+        
         <form method="POST">
             {% csrf_token %}
             {{form|crispy}}
             <br>
-            <button class="btn btn-dark ">Submit</button>
+            <button id="submitbutton" class="btn btn-dark ">Submit</button>
         </form>
         <br>
 
@@ -86,5 +85,15 @@
     * {
         font-family: 'Montserrat', sans-serif;
         overflow-x: hidden;
+    }
+    #contactbutton:hover{
+        background-color: white;
+        color: black;
+        border-color: white;
+    }
+    #submitbutton:hover{
+        background-color:black;
+        color: white;
+        border-color: black;
     }
 </style>
