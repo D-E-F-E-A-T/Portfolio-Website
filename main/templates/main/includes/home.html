@@ -1,0 +1,83 @@
+<html>
+
+<body class="bg-light">
+    <div class="container-flui text-white" style="background-color:  rgb(50, 228, 183); ">
+        <div class="container-fluid ml-1">
+            <br>
+            <h2 class="text-center display-3 d-none d-lg-block" style="font-weight: bold; overflow-y: hidden;">Hi, I am Siddhartha!</h2>
+            <h1 class="text-center display-4 d-lg-none" style="font-weight: bold;">Hi, I am Siddhartha!</h1>
+            <h5 class="text-center">Web Developer - Graphic Designer - Machine Learning Enthusiast</h5>
+            <br>
+            <div class="row justify-content-center">
+
+                <a href="{% url 'main:contact' %}" id="button" class=" text-center btn btn-dark text-wrap">Get in
+                    Touch</a>
+            </div>
+            <br>
+            <div class="container">
+                <h5>From r/quotes</h5>
+                <h3 style="font-weight: bold ; overflow-y: hidden;" class="text-left">{{quote}}</h3>
+            </div>
+            <br>
+        </div>
+    </div>
+    <br>
+    <div class="container" id="about">
+        <h1 style="font-weight: bolder;">About Me</h1>
+        <br>
+        <div class="row align-items-center">
+            <p style="text-align: justify;" class="text-left col-md-8">
+                Hey there, thanks for stopping by. My name is Siddhartha Varma. I am a CS undergrad at <a
+                    href="https://vit.ac.in" style="color: black; font-weight: bold;">Vellore Institute of
+                    Technology</a>, class of '22. I am
+                a web developer and a designer. I have always loved great design. This love for great design drives
+                me
+                to make my projects look good and feel easy to use. I am always interested to learn about new and
+                upcoming technologies which improve efficiency and make stuff easier for me. My bread and butter is
+                <a href="https://www.djangoproject.com/" style="color: black; font-weight: bold;">Django</a>,
+                and as a designer I have primarily worked under <a href="hhtps:///isavit.club"
+                    style="color: black; font-weight: bold;">ISA-VIT</a>. I have been using <a href="#"
+                    style="color: black; font-weight: bold;">Photoshop</a> and <a href="#"
+                    style="color: black; font-weight: bold;">Illustrator</a> since 9th grade.
+                I'm currently learning <a href="https://flutter.dev/"
+                    style="color: black; font-weight: bold">Flutter</a> and Machine
+                Learining with Python. I have a keen interest in making great looking websites and apps which are easy
+                to use and fast to load. I would love to intern with you or collaborate on any project. Feel free to
+                check out my social
+                profiles and my <a href="https://instagram.com/darthv_12"
+                    style="color: black; font-weight: bold">photography</a> page on Instagram.
+            </p>
+            {% load static %}
+            <img src="{% static 'main/me.jpg' %}"
+                alt="me" style="margin:0; padding:0; border: 8px solid rgb(50, 228, 183); border-radius: 5px;"
+                class="col-md-4">
+            <br>
+        </div>
+        <br>
+        <hr>
+    </div>
+    <div class="container" id="exp">
+        <h1 style="font-weight: bolder;">Experience</h1>
+        <br>
+        {% for exp in experience reversed %}
+        <div style="border-left:  rgb(50, 228, 183) 8px solid" class="container">
+            <h3>{{exp.title}}</h3>
+            <h5 class="text-muted">{{exp.date}}</h5>
+            <p class="text-left">{{exp.content}}</p>
+        </div>
+        <br>
+        {% endfor %}
+        <br>
+    </div>
+</body>
+
+</html>
+
+<style>
+    #button:hover {
+        background-color: white;
+        color: black;
+        border-color: white;
+
+    }
+</style>
